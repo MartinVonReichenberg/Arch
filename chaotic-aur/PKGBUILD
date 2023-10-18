@@ -1,0 +1,17 @@
+# Author:  Martin Stibor <martin.von.reichenberg@proton.me>
+
+pkgname=chaotic-aur
+pkgver=1
+pkgrel=1
+pkgdesc='A simple way to install Chaotic AUR repository without any manual intervention'
+arch=('any')
+url='https://aur.chaotic.cx/'
+license=('unknown')
+source=("chaotic-aur.install")
+sha512sums=('SKIP')
+
+prepare() {
+        chmod -R 0777 "chaotic-aur.install"
+}
+
+install=chaotic-aur.install
