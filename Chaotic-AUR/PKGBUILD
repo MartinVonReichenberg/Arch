@@ -1,0 +1,19 @@
+# Author: Martin Stibor <martin.von.reichenberg@proton.me>
+# This PKGBUILD is only a concept, there is no need to try to compile it as it will not pass trough the building process ...
+
+pkgname=chaotic-aur
+pkgver=1
+pkgrel=1
+arch=('any')
+pkgdesc='Easy and convenient way to add Chaotic AUR repository without any hassles . . .'
+url='https://aur.chaotic.cx/'
+license=('none')
+source=('Chaotic-AUR.sh')
+sha512sums=('SKIP')
+
+prepare() {
+           chmod -Rv 0777 Chaotic-AUR.sh
+}
+install() {
+           ./${srcdir}/Chaotic-AUR.sh
+}
